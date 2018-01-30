@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 public class MinusController implements ActionListener {
 
     PlusMinusModel model ;
+    CounterView view;
 
     public MinusController(PlusMinusModel model){
 
@@ -18,5 +19,6 @@ public class MinusController implements ActionListener {
     public void actionPerformed(ActionEvent e)
     {
         model.decrement();
+        this.view.setText(model.getZahlToString());
     }
 }

@@ -15,14 +15,13 @@ public class ButtonView extends JButton implements PlusMinusListener {
 
     @Override
     public void valueChanged(PlusMinusModel model) {
-         if(this.getText().equals("+")){
-             if(model.getZahl()== model.getMax()){
-                 setEnabled(false);
-             }
-         }else {
-             if(model.getZahl()== model.getMin()){
-                 setEnabled(false);
-             }
-         }
+        if (this.getText().equals("+")){
+            setEnabled(model.getZahl()!= model.getMax() );
+        }
+
+                if(this.getText().equals("-")){
+                 setEnabled(model.getZahl()!= model.getMin());
+        }
+
     }
 }

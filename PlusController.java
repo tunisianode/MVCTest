@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 public class PlusController implements ActionListener {
 
     PlusMinusModel model ;
-
+    CounterView view;
 
 
 
@@ -19,6 +19,8 @@ public class PlusController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        model.decrement();
+        model.increment();
+        this.view.setText(model.getZahlToString());
+
     }
 }
