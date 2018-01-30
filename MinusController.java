@@ -6,10 +6,17 @@ public class MinusController implements ActionListener {
     PlusMinusModel model ;
 
     public MinusController(PlusMinusModel model){
+
         this.model = model;
-    }
-    public void actionPerformed(ActionEvent e) {
 
     }
 
+
+
+
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+        model.decrement();
+    }
 }
